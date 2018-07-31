@@ -44,7 +44,7 @@ If you like to interpolate over the colors in a completely different fashion (e.
 ```python
 import random
 value = random.random()
-daytime.get_by_value(value, daycolordict)
+daycolor.get_by_value(value, daycolordict)
 ```
 
 ## Custom Patterns
@@ -72,7 +72,7 @@ daycolordict = {
 This would return 5 red values every two seconds after midnight and then go black again. To make this wrk you need to call your `get_current()` with a pattern like so:
 
 ```python
-dayime.get_current(daycolordict, pattern="%H:%M.%S")
+daycolor.get_current(daycolordict, pattern="%H:%M.%S")
 ```
 
 If you wanna see how these patterns are defined, check the [datetime strftime strptime behavior page](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior). With this you could even achive microsecond precision.
